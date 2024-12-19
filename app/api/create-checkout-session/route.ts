@@ -29,8 +29,8 @@ export async function POST(request: Request) {
         },
       ],
       mode: 'subscription',
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/subscription?canceled=true`,
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}?success=true`,
+      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     });
 
     return NextResponse.json({ sessionUrl: session.url });
