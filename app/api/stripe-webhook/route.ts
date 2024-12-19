@@ -59,4 +59,3 @@ export async function POST(request: Request) {
   }
 }
 
-// Remove edge runtime config to allow full Node.js runtime
